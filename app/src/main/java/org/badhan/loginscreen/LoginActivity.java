@@ -2,6 +2,7 @@ package org.badhan.loginscreen;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class LoginActivity extends BaseActivity {
@@ -25,6 +26,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void login(){
+        Log.e(tag,"--login btn taped");
         application.getAuth().getUser().setLoggedIn(true);
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
     }
